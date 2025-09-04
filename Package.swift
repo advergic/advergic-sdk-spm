@@ -9,14 +9,26 @@ let package = Package(
     products: [
         .library(
             name: "AdvergicSDK",
-            targets: ["AdvergicSDK"]
+            targets: ["AdvergicSDKWrapper"]
         ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", from: "12.6.0")
     ],
     targets: [
         .binaryTarget(
             name: "AdvergicSDK",
-            url: "https://app.advergic.com/ios/sdk/0.0.26/AdvergicSDK.xcframework.zip",
-            checksum: "252e7e37ab3b87b25431cbc2501e3eaa6ef4b5a4ed08a76c669b51fd7b08bf41"
+            url: "https://app.advergic.com/ios/sdk/0.0.27/AdvergicSDK.xcframework.zip",
+            checksum: "a788d40fbc2befc297ed728ee3aa120561da516157585542c2ff22af52829f9c"
+        ),
+        .target(
+            name: "AdvergicSDKWrapper",
+            dependencies: [
+                "AdvergicSDK",
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+            ],
+            path: "SPMWrapper",   
+            publicHeadersPath: "."
         )
     ]
 )
