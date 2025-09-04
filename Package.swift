@@ -27,8 +27,7 @@ let package = Package(
                 "AdvergicSDK",
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
             ],
-            path: "SPMWrapper",   
-            publicHeadersPath: "."
+            path: "SPMWrapper"
         )
     ]
 )
