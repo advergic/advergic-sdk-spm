@@ -18,8 +18,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AdvergicSDK",
-            url: "https://app.advergic.com/ios/sdk/0.1.4/AdvergicSDK.xcframework.zip",
-            checksum: "57ab0a7adeff590a69d35bcfedd42e8745d663e610f8a51632a6bed93a1764dc"
+            url: "https://app.advergic.com/ios/sdk/0.1.5/AdvergicSDK.xcframework.zip",
+            checksum: "c0b6b34bc6307b6d21057e83dc33bf3ad193547c2fc8830adc25e06a68cf74f7"
         ),
         .target(
             name: "AdvergicSDKWrapper",
